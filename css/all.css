@@ -1,0 +1,787 @@
+body {
+    font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
+    margin: 0px;
+    color: #FFF;
+    text-shadow: 1px 1px 3px #000;
+    background-image: url(../images/loading.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.body {
+    height: 320px;
+    width: 540px;
+    overflow: hidden;
+}
+
+.main {
+    height: 320px;
+    width: 540px;
+    overflow: hidden;
+    display: none;
+}
+
+.main .weatherInfo {
+    position: absolute;
+    width: 350px;
+    height: 230px;
+    top: 0px;
+    left: 0px;
+}
+
+.main .weatherInfo .temp {
+    height: 100px;
+    width: 350px;
+}
+
+.main .weatherInfo .temp .nowTemp {
+    float: left;
+    width: 150px;
+    height: 95px;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+}
+
+.main .weatherInfo .temp .nowTemp .num {
+    position: absolute;
+    line-height: 95px;
+    left: 10px;
+    top: 0px;
+    width: 115px;
+}
+
+.main .weatherInfo .temp .nowTemp .num.s {
+    font-size: 70px;
+}
+
+.main .weatherInfo .temp .nowTemp .num a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main .weatherInfo .temp .nowTemp .detail {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    font-size: 14px;
+}
+
+.main .weatherInfo .temp .nowTemp .detail a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main .weatherInfo .temp .vLine {
+    float: left;
+    width: 2px;
+    height: 66px;
+    margin: 20px 0px 14px 8px;
+    background: #FFF;
+}
+
+.main .weatherInfo .temp .nowOther {
+    height: 100px;
+    width: 190px;
+    float: left;
+    text-align: left;
+}
+
+.main .weatherInfo .temp .nowOther ul {
+    margin-left: 10px;
+    padding: 0px;
+    width: 180px;
+}
+
+.main .weatherInfo .temp .nowOther ul li {
+    list-style: none;
+    margin-top: 3px;
+}
+
+.main .weatherInfo .temp .nowOther ul li .pmUrl,
+.main .weatherInfo .temp .nowOther ul li .pmValue {
+    cursor: pointer;
+    text-shadow: none;
+}
+
+.main .weatherInfo .temp .nowOther ul li a:link, a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main .weatherInfo .situation {
+    width: 300px;
+}
+
+.main .weatherInfo .situation ul {
+    width: 275px;
+    padding: 0px;
+    margin-left: 25px;
+    margin-top: 5px;
+}
+
+.main .weatherInfo .situation ul li {
+    list-style: none;
+    margin-top: 3px;
+    font-size: 14px;
+}
+
+.main .toolsBanner {
+    width: 90px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+
+.main .toolsBanner div {
+    float: left;
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.main .toolsBanner div:hover {
+    opacity: 1;
+}
+
+.main .toolsBanner .tips {
+    background: url("../images/all.png") no-repeat 0 -200px;
+}
+
+.main .toolsBanner .setting {
+    background: url("../images/all.png") no-repeat 0 -233px;
+}
+
+.main .toolsBanner .refresh {
+    background: url("../images/all.png") no-repeat 0 -265px;
+}
+
+.main .weekWeather {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.main .weekWeather .weatherItem {
+    width: 20%;
+    height: 64px;
+    float: left;
+    background-image: url(../images/vLine.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.main .weekWeather .weatherItem .img {
+    width: 40%;
+    height: 100%;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.main .weekWeather .weatherItem .info {
+    width: 60%;
+    height: 76%;
+    float: left;
+    font-size: 12px;
+    margin: 2% 0px;
+}
+
+.main .weekWeather .weatherItem .info div {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+.main .tipsData {
+    width: 160px;
+    position: absolute;
+    top: 40px;
+    right: 27px;
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 3px;
+    display: none;
+}
+
+.main .tipsData .arrow {
+    position: absolute;
+    border-color: transparent transparent rgba(255, 255, 255, 0.65) transparent;
+    border-style: solid;
+    border-width: 8px;
+    top: -16px;
+    right: 70px;
+}
+
+.main .tipsData ul {
+    padding: 0px;
+    margin: 0px;
+    display: none;
+    height: 0px;
+    overflow: hidden;
+}
+
+.main .tipsData ul li {
+    list-style: none;
+    font-size: 12px;
+    margin: 10px 0px;
+    width: 100%;
+    height: 20px;
+}
+
+.main .tipsData ul li div.icon {
+    width: 27px;
+    height: 20px;
+    float: left;
+    margin-left: 7px;
+    background-image: url("../images/all.png");
+    background-repeat: no-repeat;
+}
+
+.main .tipsData ul li .dressIcon {
+}
+
+.main .tipsData ul li .lightIcon {
+    background-position: 0 -33px;
+}
+
+.main .tipsData ul li .trvalIcon {
+    background-position: 0 -67px;
+}
+
+.main .tipsData ul li .washIcon {
+    background-position: 0 -100px;
+}
+
+.main .tipsData ul li .fittingIcon {
+    background-position: 0 -133px;
+}
+
+.main .tipsData ul li .notFittingIcon {
+    background-position: 0 -167px;
+}
+
+.main .tipsData ul li span {
+    color: #333;
+    text-shadow: none;
+}
+
+.main .tipsData ul li span.dress {
+    cursor: pointer;
+}
+
+.main .tipsData ul li span.fitting {
+    color: #506D00;
+    text-shadow: 1px 1px 2px #FFF;
+    cursor: pointer;
+}
+
+.main .tipsData ul li span.notFitting {
+    color: #CE5E54;
+    text-shadow: 1px 1px 2px #FFF;
+    cursor: pointer;
+}
+
+.navigate {
+    position: absolute;
+    height: 25px;
+    bottom: 64px;
+}
+
+.navigate span {
+    display: block;
+    height: 20px;
+    width: 20px;
+    margin-left: 0px;
+    background-repeat: no-repeat;
+    background: url("../images/all.png");
+    float: left;
+}
+
+.navigate .page {
+    background-position: 0 -306px;
+    cursor: pointer;
+}
+
+.navigate .curr {
+    background-position: 0 -286px;
+}
+
+.pageSwitch {
+    position: absolute;
+    width: 22px;
+    height: 46px;
+    top: 130px;
+    background-image: url(../images/pageSwitch.png);
+    cursor: pointer;
+    opacity: 0.8;
+    display: none;
+}
+
+.pageSwitch:hover {
+    opacity: 1;
+}
+
+.pageSwitch.pre {
+    left: -4px;
+}
+
+.pageSwitch.next {
+    right: -4px;
+    background-position: 0px 46px;
+}
+
+.settingData {
+    position: relative;
+    height: 0px;
+    width: 540px;
+    background: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    display: none;
+}
+
+.settingData .back {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 20px;
+    left: 20px;
+    opacity: 0.8;
+    background-image: url("../images/all.png");
+    background-repeat: no-repeat;
+    background-position: 0 -384px;
+    cursor: pointer;
+}
+
+.settingData .back:hover {
+    opacity: 1;
+}
+
+.settingData .helpBanner {
+    position: absolute;
+    top: 16px;
+    right: 0px;
+    width: 140px;
+}
+
+.settingData .helpBanner a {
+    float: left;
+    display: block;
+    height: 20px;
+    width: 70px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #FFF;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.settingData .helpBanner a:hover {
+    opacity: 1;
+}
+
+.settingData .settingOptions {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+}
+
+.settingData .optionItem {
+    height: 22px;
+    margin: 10px 0px;
+    clear: both;
+}
+
+.settingData .optionItem div {
+    float: left;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.settingData .optionItem .optionName {
+    width: 120px;
+}
+
+.settingData .optionItem .cityList {
+    width: 375px;
+}
+
+.settingData .optionItem .cityList .cityItem {
+    float: left;
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+
+.settingData .optionItem .cityList .city {
+    height: 20px;
+    border: 1px #CCC solid;
+    border-right: none;
+    border-radius: 2px 0px 0px 2px;
+    background: #FFF;
+    color: #000;
+    text-shadow: none;
+    font-size: 13px;
+    line-height: 18px;
+    margin-left: 2px;
+    text-indent: 10px;
+}
+
+.settingData .optionItem .cityList .city.add {
+    border-right: 1px #CCC solid;
+    border-radius: 2px 2px 2px 2px;
+    cursor: pointer;
+    width: 35px;
+    text-align: center;
+    text-indent: 0px;
+    background-image: url(../images/add.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.settingData .optionItem .cityList .delete {
+    border: 1px #CCC solid;
+    border-left: none;
+    border-radius: 0px 2px 2px 0px;
+    background: #FFF;
+    height: 20px;
+    width: 22px;
+    background-image: url(../images/delete.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.settingData .optionItem .notificationName,
+.settingData .optionItem .skinName,
+.settingData .optionItem .newTabName {
+    float: left;
+    display: block;
+    margin-right: 6px;
+    cursor: pointer;
+    text-indent: 3px;
+}
+
+.settingData .optionItem input {
+    outline: none;
+    height: 20px;
+    background: #FFF;
+    border-radius: 2px;
+    border: 1px #CCC solid;
+    padding: 0 2px;
+    color: #545454;
+}
+
+.settingData .optionItem input[type=button] {
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.settingData .optionItem input[type=radio] {
+    float: left;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.settingData .optionItem input[type=checkbox] {
+    float: left;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.settingData .optionItem select {
+    outline: none;
+    height: 20px;
+    background: #FFF;
+    border-radius: 2px;
+    border: 1px #CCC solid;
+    padding: 0px;
+    color: #545454;
+    margin-right: 5px;
+}
+
+.dateBasic, .dateMore {
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.calendar {
+    font-family: 'Microsoft Yahei', Simsun, sans-serif;
+    text-shadow: none;
+    position: relative;
+    height: 0px;
+    width: 540px;
+    background: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    display: none;
+}
+
+.errorMsg {
+    display: none;
+    position: absolute;
+    top: 0px;
+    width: 260px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 140px;
+    font-size: 13px;
+    text-align: center;
+    color: red;
+}
+
+.weatherAnimationContainer div.sun {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: transparent;
+    -webkit-animation-name: sun_animation;
+    -webkit-animation-duration: 15s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes sun_animation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.weatherAnimationContainer div.rain {
+    position: absolute;
+    width: 6px;
+    height: 12px;
+    -webkit-animation-direction: normal, normal;
+    -webkit-animation-timing-function: linear, ease-in;
+    -webkit-animation-iteration-count: infinite, infinite;
+}
+
+.weatherAnimationContainer div.rain img {
+    position: absolute;
+    width: 6px;
+    height: 12px;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-transform-origin: 50% -100%;
+}
+
+@-webkit-keyframes rain_animation {
+    0% {
+        -webkit-transform: translate(0px, -50px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 540px);
+    }
+}
+
+@-webkit-keyframes rain_clockwiseSpin {
+    0% {
+        -webkit-transform: rotate(-2deg);
+    }
+    100% {
+        -webkit-transform: rotate(2deg);
+    }
+}
+
+@-webkit-keyframes rain_counterclockwiseSpinAndFlip {
+    0% {
+        -webkit-transform: scale(-1, 1) rotate(2deg);
+    }
+    100% {
+        -webkit-transform: scale(-1, 1) rotate(-2deg);
+    }
+}
+
+.weatherAnimationContainer div.thunder {
+    position: absolute;
+    right: 80px;
+    top: 0px;
+    background-color: transparent;
+    opacity: 0.0;
+    -webkit-animation-name: thunder_animation;
+    -webkit-animation-duration: 11s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: 5.0s;
+}
+
+.weatherAnimationContainer div.thunderPlus {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: transparent;
+    opacity: 0.0;
+    -webkit-animation-name: thunderPlus_animation;
+    -webkit-animation-duration: 7s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: 1s;
+}
+
+@-webkit-keyframes thunder_animation {
+    0% {
+        opacity: 10.0;
+    }
+    30% {
+        opacity: .0;
+    }
+    100% {
+        opacity: 0.0;
+    }
+}
+
+@-webkit-keyframes thunderPlus_animation {
+    0% {
+        opacity: 10.0;
+    }
+    30% {
+        opacity: .0;
+    }
+    100% {
+        opacity: 0.0;
+    }
+}
+
+.weatherAnimationContainer div.cloud {
+    position: absolute;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal, normal;
+    -webkit-animation-timing-function: linear, ease-in;
+}
+
+.weatherAnimationContainer div.cloud img {
+    position: absolute;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-transform-origin: 50% -100%;
+}
+
+@-webkit-keyframes cloud_fade {
+    0% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes cloud_float {
+    0% {
+        -webkit-transform: translate(-220px, 0px);
+    }
+    100% {
+        -webkit-transform: translate(640px, 40px);
+    }
+}
+
+.weatherAnimationContainer div.wind {
+    position: absolute;
+    -webkit-animation-iteration-count: infinite, infinite;
+    -webkit-animation-direction: normal, normal;
+    -webkit-animation-timing-function: linear, ease-in;
+}
+
+.weatherAnimationContainer div.wind img {
+    position: absolute;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-transform-origin: 50% -100%;
+}
+
+@-webkit-keyframes wind_fade {
+    0% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes wind_float {
+    0% {
+        -webkit-transform: translate(-220px, 0px);
+    }
+    100% {
+        -webkit-transform: translate(640px, 40px);
+    }
+}
+
+@-webkit-keyframes wind_clockwiseSpin {
+    0% {
+        -webkit-transform: rotateX(-360deg);
+    }
+    100% {
+        -webkit-transform: rotateX(360deg);
+    }
+}
+
+@-webkit-keyframes wind_counterclockwiseSpinAndFlip {
+    0% {
+        -webkit-transform: scale(-1, 1) rotate(360deg);
+    }
+    100% {
+        -webkit-transform: scale(-1, 1) rotate(-360deg);
+    }
+}
+
+.weatherAnimationContainer div.snow {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    -webkit-animation-iteration-count: infinite, infinite;
+    -webkit-animation-direction: normal, normal;
+    -webkit-animation-timing-function: linear, ease-in;
+}
+
+.weatherAnimationContainer div.snow img {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-transform-origin: 50% -100%;
+}
+
+@-webkit-keyframes snow_animation {
+    0% {
+        -webkit-transform: translate(0px, -50px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 600px);
+    }
+}
+
+@-webkit-keyframes snow_clockwiseSpin {
+    0% {
+        -webkit-transform: rotate(-60deg);
+    }
+    100% {
+        -webkit-transform: rotate(60deg);
+    }
+}
+
+@-webkit-keyframes snow_counterclockwiseSpinAndFlip {
+    0% {
+        -webkit-transform: scale(-1, 1) rotate(60deg);
+    }
+    100% {
+        -webkit-transform: scale(-1, 1) rotate(-60deg);
+    }
+}

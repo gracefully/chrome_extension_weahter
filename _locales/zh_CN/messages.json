@@ -1,0 +1,188 @@
+{
+  "chrome_extension_name": {
+    "message": "中国天气预报"
+  },
+  "chrome_extension_short_name": {
+    "message": "中国天气预报"
+  },
+  "chrome_extension_description": {
+    "message": "中国天气预报，首款可换肤动态天气插件，实时预报全国实况天气（气温/湿度/风向风力/空气质量PM2.5）。另含万年历，农历，阳历，月历，节日，八字等日历功能"
+  },
+  "defaultSkin": {
+    "message": "默认"
+  },
+  "autoCity": {
+    "message": "自动"
+  },
+  "tempIsNull": {
+    "message": "暂无实况"
+  },
+  "tempNull": {
+    "message": "无"
+  },
+  "PMNull": {
+    "message": "无"
+  },
+  "detail": {
+    "message": "详"
+  },
+  "curTemp": {
+    "message": "现在气温： "
+  },
+  "today": {
+    "message": "今天： "
+  },
+  "tomorrow": {
+    "message": "明天： "
+  },
+  "afterTomorrow": {
+    "message": "后天： "
+  },
+  "lastRefresh": {
+    "message": "上次刷新时间： "
+  },
+  "pmTitle": {
+    "message": "PM2.5： "
+  },
+  "pmUrl": {
+    "message": "&nbsp;&nbsp;▶"
+  },
+  "yearUnit": {
+    "message": "年"
+  },
+  "monthUnit": {
+    "message": "月"
+  },
+  "dateUnit": {
+    "message": "日"
+  },
+  "weekDate_0": {
+    "message": "周日"
+  },
+  "weekDate_1": {
+    "message": "周一"
+  },
+  "weekDate_2": {
+    "message": "周二"
+  },
+  "weekDate_3": {
+    "message": "周三"
+  },
+  "weekDate_4": {
+    "message": "周四"
+  },
+  "weekDate_5": {
+    "message": "周五"
+  },
+  "weekDate_6": {
+    "message": "周六"
+  },
+  "dressingIndex": {
+    "message": "穿衣指数："
+  },
+  "lightIndex": {
+    "message": "紫外线指数："
+  },
+  "trvalIndex": {
+    "message": "旅游指数："
+  },
+  "washIndex": {
+    "message": "洗车指数："
+  },
+  "update": {
+    "message": "&middot; 更新说明"
+  },
+  "suggest": {
+    "message": "&middot; 反馈建议"
+  },
+  "cityManage": {
+    "message": "天气城市管理："
+  },
+  "selectCity": {
+    "message": "请选择城市："
+  },
+  "skinManage": {
+    "message": "皮肤主题选择："
+  },
+  "contactUs": {
+    "message": "请您留言，帮助插件做的更好！QQ群：223024092"
+  },
+  "contactWay": {
+    "message": "联系方式："
+  },
+  "submit": {
+    "message": "提 交"
+  },
+  "commitSuccess": {
+    "message": "您的留言发送成功，如果您留下联系方式，我们会尽快回复你！"
+  },
+  "openNewTab": {
+    "message": "启用新标签页："
+  },
+  "newTabPlus": {
+    "message": "微度新标签页"
+  },
+  "fine": {
+    "message": "优"
+  },
+  "good": {
+    "message": "良"
+  },
+  "lightPollution": {
+    "message": "轻度污染"
+  },
+  "middleLevelPollution": {
+    "message": "中度污染"
+  },
+  "severePollution": {
+    "message": "重度污染"
+  },
+  "severeContamination": {
+    "message": "严重污染"
+  },
+  "PM25Index": {
+    "message": "PM2.5指数："
+  },
+  "openNotification": {
+    "message": "开启桌面通知："
+  },
+  "notification": {
+    "message": ""
+  },
+  "weather": {
+    "message": "天气"
+  },
+  "isSundayLast": {
+    "message": "周首日为周一："
+  },
+  "isLastCityError": {
+    "message": "最后的城市不能删除！"
+  },
+  "humidity": {
+    "message": "湿度"
+  },
+  "permanentCalendar": {
+    "message": "万年历"
+  },
+  "weatherFail": {
+    "message": "天气数据获取失败!"
+  },
+  "holidayFail": {
+    "message": "假日信息获取失败!"
+  },
+  "huangliFail": {
+    "message": "黄历信息获取失败!"
+  },
+  "pm25Fail": {
+    "message": "PM2.5数据获取失败!"
+  },
+  "skinFail": {
+    "message": "皮肤数据获取失败!"
+  },
+  "cityFail": {
+    "message": "城市数据获取失败!"
+  },
+  "updateFail": {
+    "message": "更新数据获取失败!"
+  }
+}

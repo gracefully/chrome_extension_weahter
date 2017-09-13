@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-Type" content="text/html;charset=utf-8"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/all.js"></script>
+    <script src="js/drawLine/drawLine.js"></script>
+    <script src="js/weatherAnimation/weatherAnimation.js"></script>
+    <script src="js/selectCity/selectCity.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/all.css"/>
+</head>
+<body>
+<div class="body">
+    <div class="main weatherAnimationContainer">
+        <div class="weatherInfo">
+            <div class="temp">
+                <div class="nowTemp">
+                    <div class="num"></div>
+                    <div class="detail"></div>
+                </div>
+                <div class="vLine"></div>
+                <div class="nowOther">
+                    <ul>
+                        <li class="todayTemp"></li>
+                        <li><span class="pmTitle" data-i18n-content="pmTitle"></span><a class="pmValue"></a><a
+                                class="pmUrl" data-i18n-content="pmUrl"></a></li>
+                        <li class="cityName"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="situation">
+                <ul>
+                    <li class="desc"></li>
+                    <li class="humidity"></li>
+                    <li class="wind"></li>
+                    <li class="date">
+                        <div class="dateBasic"></div>
+                        <div class="dateMore"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="toolsBanner">
+            <div class="tips"></div>
+            <div class="setting"></div>
+            <div class="refresh"></div>
+        </div>
+        <div class="navigate"></div>
+        <div class="pageSwitch pre"></div>
+        <div class="pageSwitch next"></div>
+        <div class="weekWeather"></div>
+        <div class="tipsData">
+            <div class="arrow"></div>
+            <ul>
+                <li>
+                    <div class="icon dressIcon"></div>
+                    <span data-i18n-content="dressingIndex"></span><span class="dress"></span></li>
+                <li>
+                    <div class="icon lightIcon"></div>
+                    <span data-i18n-content="lightIndex"></span><span class="light"></span></li>
+                <li>
+                    <div class="icon trvalIcon"></div>
+                    <span data-i18n-content="trvalIndex"></span><span class="trval"></span></li>
+                <li>
+                    <div class="icon washIcon"></div>
+                    <span data-i18n-content="washIndex"></span><span class="wash"></span></li>
+                <li>
+                    <div class="icon fittingIcon"></div>
+                    <span class="fitting"></span></li>
+                <li>
+                    <div class="icon notFittingIcon"></div>
+                    <span class="notFitting"></span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="settingData"></div>
+    <div class="calendar"></div>
+    <div class="errorMsg"></div>
+</div>
+</body>
+</html>
